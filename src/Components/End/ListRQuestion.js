@@ -5,6 +5,7 @@ import Question from "./ResultsQuestion";
 
 
 const ListQuestion = (props) => {
+    const {selectData} = props
     
     return (
         <Wrapper>
@@ -13,9 +14,9 @@ const ListQuestion = (props) => {
                 Data.map(
                     (item, index) =>{  
                         let select;
-                        for(let i = 1; i <props.length; i++){
-                            if(props[i].numQ === index + 1)
-                                return select = props[i].select
+                        for(let i = 1; i <selectData.length; i++){
+                            if(selectData[i].numQ === index + 1)
+                                select = selectData[i].select
                         }
                         return (
                             <Question
